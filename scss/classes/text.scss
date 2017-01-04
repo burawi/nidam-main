@@ -1,0 +1,49 @@
+// compileOnSave: false
+@each $color-name, $color-value in $colors {
+    .txt-colored-#{$color-name} {
+        color: $color-value;
+    }
+}
+
+.txt-display4 {
+    font-size: 112px * $txt-em;
+    font-weight: lighter;
+}
+
+.txt-display3 {
+    font-size: 56px * $txt-em;
+}
+
+.txt-display2 {
+    font-size: 45px * $txt-em;
+}
+
+.txt-display1 {
+    font-size: 34px * $txt-em;
+}
+
+.txt-headline {
+    font-size: 24px * $txt-em;
+}
+
+.txt-title {
+    font-size: 20px * $txt-em;
+    font-weight: bolder;
+}
+
+.txt-subheading {
+    font-size: 15px * $txt-em;
+}
+
+.txt-body2 {
+    font-size: 13px * $txt-em;
+    font-weight: bolder;
+}
+
+.txt-body1 {
+    font-size: 13px * $txt-em;
+}
+
+.txt-caption {
+    font-size: 12px * $txt-em;
+}

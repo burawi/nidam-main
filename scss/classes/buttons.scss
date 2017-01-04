@@ -1,0 +1,8 @@
+// compileOnSave: false
+@each $color-name, $color-value in $colors {
+
+    .btn-#{$color-name} {
+        color: #FFF;
+        background-color: $color-value;
+    }
+}

@@ -1,0 +1,4 @@
+@function blackToGray($color) {
+    $alpha: alpha($color);
+    @return lighten(#000, $alpha * 100);
+}

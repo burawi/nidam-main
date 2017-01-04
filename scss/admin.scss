@@ -1,0 +1,134 @@
+// compileCompressed: ../client/css/admin.css
+@import "./global.scss";
+
+$big-screen: 1024px;
+
+#header {
+    padding: 8px 16px;
+    @extend .txt-display1;
+    @extend .shadow1;
+
+    #menu-toggle{
+        @extend .mdi;
+        @extend .mdi-menu;
+        padding: 8px;
+        display: inline-block;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+
+        @media screen and (min-width: $big-screen) {
+            transform: translateY(-100px);
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+
+}
+
+#sidebar {
+    @extend .pure-menu;
+    @extend .shadow2;
+    position: absolute;
+    z-index: 10;
+    left: -220px;
+    -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    height: 100%;
+    width: 200px;
+    @extend .bg-gradient-primary;
+    @include bg-image('/img/nature.jpg');
+    color: #FFF;
+
+    @media screen and (min-width: $big-screen) {
+        left: 0px;
+        -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    &.visible {
+        left: 0px;
+        -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    #sidebar-title {
+        @extend .pure-menu-heading;
+        padding: 16px 32px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #FFF;
+        text-align: center;
+    }
+
+    #sidebar-list {
+        li {
+            text-transform: capitalize;
+            padding: 8px 16px;
+        }
+    }
+}
+
+#page-content {
+    padding: 16px;
+    -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @media screen and (min-width: $big-screen) {
+        padding-left: 232px;
+        -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .page-title {
+        color: map-get($colors, font);
+        border-bottom: 1px solid map-get($colors, primary);
+        padding-left: 20px;
+        margin-bottom: 16px;
+        text-transform: capitalize;
+
+        .icon {
+            color: map-get($colors, primary);
+        }
+    }
+
+    #page-title {
+        @extend .txt-title;
+        @extend .page-title;
+    }
+
+    .page-subtitle {
+        @extend .txt-subheading;
+        @extend .page-title;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .child-view {
+        @extend .animated;
+        @extend .bounceInUp;
+    }
+
+    .pure-table {
+        border: none;
+
+        thead {
+            background-color: inherit;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: darken(map-get($colors, font), 15%);
+            border-bottom: 1px solid map-get($colors, primary);
+        }
+
+        tbody {
+            tr {
+                border-bottom: 1px solid lighten(blackToGray(map-get($colors, font)), 15%);
+            }
+        }
+
+        td {
+            border: none;
+        }
+
+    }
+}

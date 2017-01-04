@@ -1,0 +1,52 @@
+@import "./libraries/pure-min.scss";
+@import "./libraries/on-pure.scss";
+@import "./libraries/animate.min.scss";
+@import "./libraries/csspin-morph.scss";
+@import "./../client/bower/mdi/scss/materialdesignicons.scss";
+
+$clrPr: #45c0fd;
+$clrAc: #242f34;
+
+$colors: (
+    primary: $clrPr,
+    primarydark: darken($clrPr, 15%),
+    primarylight: lighten($clrPr, 15%),
+    accent: $clrAc,
+    accentdark: darken($clrAc, 15%),
+    accentlight: lighten($clrAc, 15%),
+    font: rgba(#000, 0.5),
+    facebook: rgb(17, 68, 166),
+    google: rgb(231, 20, 20),
+    twitter: rgb(84, 183, 205)
+);
+
+$txt-em: 1.2;
+
+@import "./classes/buttons.scss";
+@import "./classes/backgrounds.scss";
+@import "./classes/text.scss";
+@import "./classes/shadows.scss";
+@import "./classes/mixins.scss";
+@import "./classes/functions.scss";
+
+html, body {
+    height: 100%;
+    color: map-get($colors, font);
+    @extend .txt-body1;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0px 4px;
+}
+
+.mdi {
+    @extend .icon;
+}
+
+.loading {
+    background-color: map-get($colors, primary);
+    @extend .cp-spinner;
+    @extend .cp-morph;
+}

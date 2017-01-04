@@ -1,0 +1,24 @@
+// compileOnSave: false
+// =======================================================================
+// BACKGROUNDS
+// =======================================================================
+
+@each $color-name, $color-value in $colors {
+    .bg-#{$color-name} {
+        background-color: $color-value;
+        color: ma-color('white');
+    }
+
+    .bg-gradient-#{$color-name}{
+        $top-color: $color-value;
+        $bottom-color: darken($top-color, 15%);
+        background: $top-color;
+        background: -moz-linear-gradient(top,  $top-color 0%, $bottom-color 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop(100%,$bottom-color));
+        background: -webkit-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+        background: -o-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+        background: -ms-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+        background: linear-gradient(to bottom,  $top-color 0%,$bottom-color 100%);
+        background-size: 150% 150%;
+    }
+}

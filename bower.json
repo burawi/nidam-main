@@ -1,0 +1,27 @@
+{
+  "name": "main",
+  "main": "index.js",
+  "homepage": "",
+  "authors": [
+    "burawi <burawi.ba@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mdi": "^1.7.22",
+    "animate.css": "^3.5.2",
+    "vue": "^2.1.8",
+    "vue-resource": "^1.0.3",
+    "zepto": "^1.1.6",
+    "vanillatoasts": "^1.1.0"
+  }
+}
