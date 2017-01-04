@@ -1,10 +1,12 @@
-include ./../partials/header.pug
-
-//- ======================
-//- CONTENT
-//- ======================
-
-#page-content
-    block content
-
-include ./../partials/footer.pug
+doctype html
+html
+    head
+        title= mdl.conf.msg.appname
+        meta(name="viewport", content="width=device-width, initial-scale=0.41, maximum-scale=1")
+        //- CSS IMPORTS
+        link(href=origin+"",media="all",rel="stylesheet",type="text/css")
+        //- JAVASCRIPT IMPORTS
+        script(src=origin+'')
+    body
+        #page-content
+            block content
